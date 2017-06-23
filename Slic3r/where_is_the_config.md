@@ -1,0 +1,1 @@
+* Linux: ~/.Slic3r
