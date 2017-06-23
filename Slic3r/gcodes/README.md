@@ -1,4 +1,4 @@
-This directory containes various gcode sippels
+This directory containes various gcode snippels
 
 they can be added within Slic3r at Printer Settings -> Custom G-Code
 
