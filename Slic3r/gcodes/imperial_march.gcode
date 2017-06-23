@@ -1,0 +1,21 @@
+;this snipped plays a kind of imperial march
+;great for the end of your print job :-)
+;imperial martch
+M300 S220 P300 ;LA3
+G4 P300
+M300 S220 P300 ;LA3
+G4 P300
+M300 S220 P300 ; LA3
+G4 P300
+M300 S174.61 P350 ;F3
+G4 P75
+M300 S261.63 P250  ;c4
+G4 P100
+M300 S220 P350
+G4 P100
+M300 S174.61 P350 ;F3
+G4 P75
+M300 S261.63 P250  ;c4
+G4 P100
+M300 S220 P400
+
