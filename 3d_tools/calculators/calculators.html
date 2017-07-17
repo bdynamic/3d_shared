@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html xmlns:fb="http://ogp.me/ns/fb#" prefix="og: http://ogp.me/ns#" class=" js video audio" lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>RepRap Calculator - Prusa Printers</title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://www.prusaprinters.org/xmlrpc.php">
+
+<!-- favicon -->
+<link rel="icon" href="http://www.prusaprinters.org/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://www.prusaprinters.org/favicon.ico" type="image/x-icon">
+<!-- favicon end -->
+<!-- custom background css -->
+						
+				
+				
+				
+																
+		<style type="text/css">
+		body{background-image:url(/wp-content/uploads/2013/10/background.png)!important; }
+	</style>
+	<!-- custom background css end -->
+<!-- custom typography settings -->
+		<style type="text/css">
+								</style>
+		<!-- custom typography settings end -->
+	<!--[if lt IE 9]>
+		<script src="http://www.prusaprinters.org/wp-content/themes/klein-2.1.4/js/html5shiv.js"></script>
+	<![endif]-->
+	<!--[if IE 7]>
+		<link rel="stylesheet" media="all" href="http://www.prusaprinters.org/wp-content/themes/klein-2.1.4/css/font-awesome-ie7.css" />
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="calculators-Dateien/orangebox.css">
+
+<!-- This site is optimized with the Yoast SEO plugin v4.9 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Best tool for calibrating your RepRap based 3D printer. Prusa, Rostock, Mendel, all of them!">
+<link rel="canonical" href="calculators-Dateien/a_002.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RepRap Calculator - Prusa Printers">
+<meta property="og:description" content="Best tool for calibrating your RepRap based 3D printer. Prusa, Rostock, Mendel, all of them!">
+<meta property="og:url" content="http://www.prusaprinters.org/calculator/">
+<meta property="og:site_name" content="Prusa Printers">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="Best tool for calibrating your RepRap based 3D printer. Prusa, Rostock, Mendel, all of them!">
+<meta name="twitter:title" content="RepRap Calculator - Prusa Printers">
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="http://platform.vine.co/">
+<link rel="dns-prefetch" href="http://maxcdn.bootstrapcdn.com/">
+<link rel="dns-prefetch" href="http://cdn.jsdelivr.net/">
+<link rel="dns-prefetch" href="http://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Prusa Printers » Feed" href="http://www.prusaprinters.org/feed/">
+<link rel="alternate" type="application/rss+xml" title="Prusa Printers » Comments Feed" href="http://www.prusaprinters.org/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Prusa Printers » RepRap Calculator Comments Feed" href="http://www.prusaprinters.org/calculator/feed/">
+<!-- This site is powered by Shareaholic - https://shareaholic.com -->
+<script async="" src="calculators-Dateien/nsc.js"></script><script id="twitter-wjs" src="calculators-Dateien/widgets.js"></script><script id="facebook-jssdk" src="calculators-Dateien/sdk.js"></script><script type="text/javascript" id="www-widgetapi-script" src="calculators-Dateien/www-widgetapi.js" async=""></script><script async="" src="calculators-Dateien/gtm.html"></script><script src="calculators-Dateien/iframe_api.js"></script><script type="text/javascript" data-cfasync="false">
+  //<![CDATA[
+    _SHR_SETTINGS = {"endpoints":{"local_recs_url":"http:\/\/www.prusaprinters.org\/wp-admin\/admin-ajax.php?action=shareaholic_permalink_related","share_counts_url":"http:\/\/www.prusaprinters.org\/wp-admin\/admin-ajax.php?action=shareaholic_share_counts_api"}};
+  //]]>
+</script>
+<script type="text/javascript" data-cfasync="false" src="calculators-Dateien/shareaholic.js" data-shr-siteid="5cee4f4477eebe21e6fec533fd3138b6" async="async">
+</script>
+
+<!-- Shareaholic Content Tags -->
+<meta name="shareaholic:site_name" content="Prusa Printers">
+<meta name="shareaholic:language" content="en-US">
+<meta name="shareaholic:url" content="http://www.prusaprinters.org/calculator/">
+<meta name="shareaholic:keywords" content="reprap calibration">
+<meta name="shareaholic:article_published_time" content="2015-02-08T00:02:32+00:00">
+<meta name="shareaholic:article_modified_time" content="2017-07-06T15:26:42+00:00">
+<meta name="shareaholic:shareable_page" content="true">
+<meta name="shareaholic:article_author_name" content="Josef Průša">
+<meta name="shareaholic:site_id" content="5cee4f4477eebe21e6fec533fd3138b6">
+<meta name="shareaholic:wp_version" content="7.8.0.4">
+
+<!-- Shareaholic Content Tags End -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.prusaprinters.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b===c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="calculators-Dateien/wp-emoji-release.js" type="text/javascript" defer="defer"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="bbp-default-css" href="calculators-Dateien/bbpress.css" type="text/css" media="screen">
+<link rel="stylesheet" id="contact-form-7-css" href="calculators-Dateien/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="rs-plugin-settings-css" href="calculators-Dateien/settings.css" type="text/css" media="all">
+<style id="rs-plugin-settings-inline-css" type="text/css">
+.tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}
+</style>
+<link rel="stylesheet" id="klein-bootstrap-css" href="calculators-Dateien/bootstrap.css" type="text/css" media="all">
+<link rel="stylesheet" id="klein-bootstrap-theme-css" href="calculators-Dateien/bootstrap-theme.css" type="text/css" media="all">
+<link rel="stylesheet" id="klein-base-css" href="calculators-Dateien/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="klein-layout-css" href="calculators-Dateien/layout.css" type="text/css" media="all">
+<link rel="stylesheet" id="klein-mobile-stylesheet-css" href="calculators-Dateien/mobile.css" type="text/css" media="all">
+<link rel="stylesheet" id="klein-magnific-popup-css" href="calculators-Dateien/magnific.css" type="text/css" media="all">
+<link rel="stylesheet" id="klein-bx-slider-css" href="calculators-Dateien/bx-slider.css" type="text/css" media="all">
+<link rel="stylesheet" id="js_composer_front-css" href="calculators-Dateien/js_composer.css" type="text/css" media="all">
+<link rel="stylesheet" id="klein-visual-composer-layer-css" href="calculators-Dateien/visual-composer.css" type="text/css" media="all">
+<link rel="stylesheet" id="twitterfeed-css" href="calculators-Dateien/twitter-feed.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="calculators-Dateien/font-awesome.css" type="text/css" media="all">
+<link rel="stylesheet" id="js_composer_custom_css-css" href="calculators-Dateien/custom.css" type="text/css" media="screen">
+<link rel="stylesheet" id="bfa-font-awesome-css" href="calculators-Dateien/font-awesome_002.css" type="text/css" media="all">
+<script type="text/javascript" src="calculators-Dateien/jquery_003.js"></script>
+<script type="text/javascript" src="calculators-Dateien/jquery-migrate.js"></script>
+<script type="text/javascript" src="calculators-Dateien/jquery_004.js"></script>
+<script type="text/javascript" src="calculators-Dateien/jquery.js"></script>
+<script type="text/javascript" src="calculators-Dateien/gtm4wp-form-move-tracker.js"></script>
+<script type="text/javascript" src="calculators-Dateien/gtm4wp-social-tracker.js"></script>
+<script type="text/javascript" src="calculators-Dateien/gtm4wp-youtube.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var orangebox_vars = {"addThis":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="calculators-Dateien/orangebox.js"></script>
+<link rel="https://api.w.org/" href="http://www.prusaprinters.org/wp-json/">
+<meta name="generator" content="WordPress 4.8">
+<link rel="shortlink" href="http://www.prusaprinters.org/?p=3416">
+<link rel="alternate" type="application/json+oembed" href="http://www.prusaprinters.org/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.prusaprinters.org%2Fcalculator%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://www.prusaprinters.org/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.prusaprinters.org%2Fcalculator%2F&amp;format=xml">
+<meta property="fb:app_id" content="1715442508709402"><script type="text/javascript" data-cfasync="false">var _mmunch = {'front': false, 'page': false, 'post': false, 'category': false, 'author': false, 'search': false, 'attachment': false, 'tag': false};_mmunch['page'] = true; _mmunch['pageData'] = {"ID":3416,"post_name":"calculator","post_title":"RepRap Calculator","post_type":"page","post_author":"1","post_status":"publish"};</script><script data-cfasync="false" src="calculators-Dateien/site.js" id="mailmunch-script" data-plugin="mc_mm" data-mailmunch-site-id="56311" async=""></script>
+<!-- Google Tag Manager for WordPress by DuracellTomi - http://duracelltomi.com -->
+<script data-cfasync="false" type="text/javascript">
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+	dataLayer.push({"pagePostType":"page","pagePostType2":"single-page","pagePostAuthor":"Josef Průša"});
+</script>
+<script data-cfasync="false">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KJD4KK');</script>
+<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager for WordPress by DuracellTomi -->		<!--[if lte IE 8]>
+			<link rel="stylesheet" href="http://www.prusaprinters.org/wp-content/themes/klein-2.1.4/css/ie-fix.css" type="text/css"/>
+			<script src="http://www.prusaprinters.org/wp-content/themes/klein-2.1.4/js/ie-fix.js"></script>
+		<![endif]-->
+	
+		<!--[if gt IE 8]>
+			<link href="//fonts.googleapis.com/css?family=PT+Sans:400,700|Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">
+		<![endif]-->
+
+		<!--[if !IE]> -->
+			<link href="calculators-Dateien/css.css" rel="stylesheet" type="text/css">
+		<!-- <![endif]-->
+	    <style type="text/css">
+	    	    
+        
+
+		
+		
+
+    </style>
+    		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress.">
+<!--[if IE 8]><link rel="stylesheet" type="text/css" href="http://www.prusaprinters.org/wp-content/plugins/js_composer/assets/css/vc-ie8.css" media="screen"><![endif]--><style type="text/css" id="syntaxhighlighteranchor"></style>
+
+<meta property="fb:admins" content="1013514008">
+<link rel="stylesheet" type="text/css" href="calculators-Dateien/styles_002.css"><style type="text/css">a.newsharecounts-counter,a.newsharecounts-counter:focus,a.newsharecounts-counter:hover{text-decoration:none;color:#000;}.newsharecounts-counter{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;display:inline-block;vertical-align:top;position:relative;height:20px;margin-bottom:5px;padding:0 8px;font:400 14px/18px Helvetica,sans-serif;content:attr(data-count);text-align:center;color:#8a8a8a;background-color:#fff;border-radius:4px;border:1px solid #a0a0a0;box-shadow:0}.newsharecounts-counter[data-size=large]{height:28px;line-height:26px;}.newsharecounts-counter[data-dir=top],.newsharecounts-counter[data-dir=bottom]{height:36px;line-height:34px;}.newsharecounts-counter[data-dir]:after,.newsharecounts-counter[data-dir]:before{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;display:block;content:"";position:absolute;margin:auto;height:0;width:0;pointer-events:none;border:5px solid transparent}.newsharecounts-counter[data-dir=top]:after,.newsharecounts-counter[data-dir=top]:before,.newsharecounts-counter[data-dir=bottom]:after,.newsharecounts-counter[data-dir=bottom]:before{left:0;right:0}.newsharecounts-counter[data-dir=left]:after,.newsharecounts-counter[data-dir=left]:before,.newsharecounts-counter[data-dir=right]:after,.newsharecounts-counter[data-dir=right]:before{top:0;bottom:0}.newsharecounts-counter[data-dir=top]:after{top:-9px;border-bottom-color:#fff}.newsharecounts-counter[data-dir=top]:before{top:-10px;border-bottom-color:#a0a0a0}.newsharecounts-counter[data-dir=bottom]:after{bottom:-9px;border-top-color:#fff}.newsharecounts-counter[data-dir=bottom]:before{bottom:-10px;border-top-color:#a0a0a0}.newsharecounts-counter[data-dir=left]:after{left:-9px;border-right-color:#fff}.newsharecounts-counter[data-dir=left]:before{left:-10px;border-right-color:#a0a0a0}.newsharecounts-counter[data-dir=right]:after{right:-9px;border-left-color:#fff}.newsharecounts-counter[data-dir=right]:before{right:-10px;border-left-color:#a0a0a0}.newsharecounts-auto{display:none}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+<body class="page-template page-template-calculator page-template-calculator-php page page-id-3416 group-blog klein wpb-js-composer js-comp-ver-4.3.4 vc_responsive"><div class="mailmunch-scrollbox mailmunch-scrollbox-15d522f960cb525" style="position: fixed; bottom: -314px; right: 0px; z-index: 999999; line-height: 0px; transition: bottom 0.4s ease 0s; opacity: 0; display: block;"><iframe class="mailmunch-scrollbox-iframe mailmunch-scrollbox-iframe-15d522f960cb525" scrolling="no" allowtransparency="true" style="background: transparent none repeat scroll 0% 0%; border: 0px none; width: 100%; height: 314px; z-index: 18000; margin-bottom: 0px;" frameborder="0"></iframe></div>
+
+<script type="text/javascript" src="calculators-Dateien/nsc_002.js"></script>
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KJD4KK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="page" class="hfeed site boxed">
+		<div id="bp-klein-top-bar">
+		<nav id="bp-klein-user-bar" class="container" role="navigation">
+			<div class="row">
+				<div class="col-md-8 col-sm-8">
+					<p class="remove-bottom site-description">
+						Official Prusa 3D printers community					</p>
+				</div>
+				<div id="bp-klein-user-bar-action" class="col-md-4 col-sm-4">
+					<div class="pull-right">
+													<a data-toggle="modal" id="klein-login-btn" class="btn btn-primary" href="#klein_login_modal" title="Login"><i class="icon-lock"></i> Login</a>
+							<a id="klein-register-btn" title="Register" class="btn btn-primary" rel="nofollow" href="http://www.prusaprinters.org/wp-login.php?action=register">Register</a>							<div class="modal fade" id="klein_login_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+											<h4 class="modal-title">
+												Login to Prusa Printers											</h4>
+										</div>
+										<div class="modal-body">
+											
+											<div id="klein-modal-body">
+																									
+		<form name="loginform" id="loginform" action="http://www.prusaprinters.org/wp-login.php" method="post">
+			
+			<p class="login-username">
+				<label for="user_login">Username or Email Address</label>
+				<input name="log" id="user_login" class="input" size="20" type="text">
+			</p>
+			<p class="login-password">
+				<label for="user_pass">Password</label>
+				<input name="pwd" id="user_pass" class="input" value="" size="20" type="password">
+			</p>
+			
+			<p class="login-remember"><label><input name="rememberme" id="rememberme" value="forever" type="checkbox"> Remember Me</label></p>
+			<p class="login-submit">
+				<input name="wp-submit" id="wp-submit" class="button button-primary" value="Log In" type="submit">
+				<input name="redirect_to" value="http://www.prusaprinters.org/calculator/" type="hidden">
+			</p>
+			
+		</form>																																				</div>
+																							<div class="clearfix">
+												<script type="text/javascript" src="calculators-Dateien/editor.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/www.prusaprinters.org\/wp-json\/","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}},"cached":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="calculators-Dateien/scripts.js"></script>
+<script type="text/javascript" src="calculators-Dateien/blankshield.js"></script>
+<script type="text/javascript" src="calculators-Dateien/block-tabnapping.js"></script>
+<script type="text/javascript" src="calculators-Dateien/respond.js"></script>
+<script type="text/javascript" src="calculators-Dateien/modernizr.js"></script>
+<script type="text/javascript" src="calculators-Dateien/placeholder-polyfill.js"></script>
+<script type="text/javascript" src="calculators-Dateien/bx-slider.js"></script>
+<script type="text/javascript" src="calculators-Dateien/jquery_002.js"></script>
+<script type="text/javascript" src="calculators-Dateien/bootstrap.js"></script>
+<script type="text/javascript" src="calculators-Dateien/klein.js"></script>
+<script type="text/javascript" src="calculators-Dateien/comment-reply.js"></script>
+<script type="text/javascript" src="calculators-Dateien/twitter-feed.js"></script>
+<script type="text/javascript" src="calculators-Dateien/embed.js"></script>
+<script type="text/javascript" src="calculators-Dateien/wp-embed.js"></script>
+											</div>
+											
+										</div>
+									</div><!-- /.modal-content -->
+								</div><!-- /.modal-dialog -->
+							</div><!-- /.modal -->
+											</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	
+	<header id="header" class="site-header" role="banner">
+		
+		<div class="container">
+			<div class="row">
+				<div class="site-branding col-md-2 col-sm-2" id="site-name">
+					<a id="logo-anchor" href="http://www.prusaprinters.org/" title="Prusa Printers - Official Prusa 3D printers community" rel="home">
+												<h1>Prusa Printers</h1>
+						<img src="calculators-Dateien/logo-v2-web.png" alt="Prusa Printers - Official Prusa 3D printers community">
+					</a>
+				</div>
+				
+				<div class="desktop-menu col-md-10 col-sm-10 show-on-desktops">
+					<div class="pull-right">
+										<div id="main-menu-desktop" class="navigation-desktop"><ul id="menu-main-menu" class="menu desktop"><li id="menu-item-3641" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3641"><a href="http://prusaprinters.org/">Home</a></li>
+<li id="menu-item-3458" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3416 current_page_item menu-item-3458"><a href="http://www.prusaprinters.org/calculator/"><i class="fa fa-calculator"></i> Calculator</a></li>
+<li id="menu-item-4059" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4059"><a href="http://www.prusaprinters.org/color-print/"><i class="fa fa-pencil"></i> Color Print</a></li>
+<li id="menu-item-3568" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3568"><a href="http://prusaprinters.org/prusa-i3/"><i class="fa fa-info-circle"></i> Prusa i3</a></li>
+<li id="menu-item-3797" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3797"><a target="_blank" href="http://shop.prusa3d.com/en/3d-printers/59-original-prusa-i3-kit-with-lcd.html"><i class="fa fa-shopping-cart"></i> Original Prusa i3 kit</a></li>
+<li id="menu-item-3964" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3964"><a href="http://www.prusaprinters.org/" class="desktop-menu-data-dropdown">Blog&nbsp; <i class="nav-icon glyphicon glyphicon-chevron-down"></i></a>
+<ul class="sub-menu">
+	<li id="menu-item-3571" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3571"><a href="http://prusaprinters.org/category/guides/">Guides</a></li>
+	<li id="menu-item-3529" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3529"><a href="http://prusaprinters.org/category/interviews/">Interviews</a></li>
+</ul>
+</li>
+<li id="menu-item-3518" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3518"><a title="Forums" href="http://shop.prusa3d.com/forum">Forums</a></li>
+</ul></div>					</div>
+					<div class="clearfix"></div>
+				</div>
+				
+				<div class="small-screen-device-nav hide-on-desktops col-md-8 col-sm-8">
+					<nav id="site-navigation" class="main-navigation pull-right" role="navigation">
+						<div id="menu">
+							<div data-dropdown=".menu.mobile" class="nav-btn glyphicon glyphicon-align-justify icon-32" aria-hidden="true"></div>
+						</div>
+					</nav><!-- #site-navigation -->
+										<ul id="menu-main-menu-1" class="menu mobile container row"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3641"><a href="http://prusaprinters.org/">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3416 current_page_item menu-item-3458"><a href="http://www.prusaprinters.org/calculator/"><i class="fa fa-calculator"></i> Calculator</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4059"><a href="http://www.prusaprinters.org/color-print/"><i class="fa fa-pencil"></i> Color Print</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3568"><a href="http://prusaprinters.org/prusa-i3/"><i class="fa fa-info-circle"></i> Prusa i3</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3797"><a target="_blank" href="http://shop.prusa3d.com/en/3d-printers/59-original-prusa-i3-kit-with-lcd.html"><i class="fa fa-shopping-cart"></i> Original Prusa i3 kit</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3964"><a href="http://www.prusaprinters.org/" class="desktop-menu-data-dropdown">Blog&nbsp; <span class="sub-menu-toggle"><i class="nav-icon glyphicon glyphicon-chevron-down"></i></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3571"><a href="http://prusaprinters.org/category/guides/">Guides</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3529"><a href="http://prusaprinters.org/category/interviews/">Interviews</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3518"><a title="Forums" href="http://shop.prusa3d.com/forum">Forums</a></li>
+</ul>				</div>	
+			</div>	
+		</div>
+	</header><!-- #masthead -->
+		
+	<div class="clearfix"></div>
+	
+		<div id="klein-rev-slider">
+		</div>
+	<div id="main" class="container site-main">
+		
+
+      <!-- Breadcrumb NavXT 5.2.0 -->
+
+<script type="text/javascript">
+            var $ = jQuery;
+</script>
+<div id="calculator">
+<div class="row">
+	<div class="col-md-3 calc-menu">
+    <aside class="widget">
+      <h3 class="widget-title">Calculators</h3>
+      <div class="widget-clear"></div>
+      <ul>
+        <li>
+          <a href="#filamentplaceholder">Filament</a>
+            <ul class="nav">
+              <li><a href="#realfilament">Real filament price</a></li>
+            </ul>
+        </li>
+        <li>
+          <a href="#steppermotors">Stepper motors</a>
+          <ul class="nav">
+            <li><a href="#stepspermmbelt">Steps per millimeter - belt</a></li>
+            <li><a href="#stepspermmlead">Steps per millimeter - leadscrew</a></li>
+            <li><a href="#optimallayer">Optimal layer height</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#acceleration">Acceleration</a>
+          <ul class="nav">
+            <li><a href="#speed">Max speed</a></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+    <aside class="widget">
+      <h3 class="widget-title">Original Prusa i3</h3>
+      <div class="widget-clear"></div>
+      <a href="http://shop.prusa3d.com/en/3d-printers/59-original-prusa-i3-kit-with-lcd.html">
+      Interested in just 3D printing and not calibration? Check out the precalibrated <strong>Original Prusa i3 directly from Josef Prusa.</strong>
+      <img src="calculators-Dateien/prusapri-silueta.png">
+      </a>
+    </aside>
+    		<aside id="recent-posts-5" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3><div class="widget-clear"></div>		<ul>
+					<li>
+				<a href="http://www.prusaprinters.org/prusacontrol-release/">PrusaControl release</a>
+						</li>
+					<li>
+				<a href="http://www.prusaprinters.org/update-multi-material-upgrade-2/">Update on Multi Material Upgrade #2</a>
+						</li>
+					<li>
+				<a href="http://www.prusaprinters.org/original-prusa-i3-mk2s-release/">Original Prusa i3 MK2S release</a>
+						</li>
+					<li>
+				<a href="http://www.prusaprinters.org/smooth-variable-layer-height-awesome-supports-slic3r-prusa-edition/">Smooth Variable Layer Height and Awesome Supports in Slic3r Prusa Edition</a>
+						</li>
+					<li>
+				<a href="http://www.prusaprinters.org/update-multimaterial-upgrade/">Update on Multi Material Upgrade</a>
+						</li>
+				</ul>
+		</aside>		<aside id="bbp_replies_widget-3" class="widget widget_display_replies"><h3 class="widget-title">Recent Replies</h3><div class="widget-clear"></div>
+		<ul>
+
+			
+				<li>
+
+					<a class="bbp-reply-topic-title" href="http://www.prusaprinters.org/forums/topic/extrusion-problem-during-print-filament-not-pulled/#post-7022" title="I have same issue.
+Did you find a solution ?">Extrusion Problem during print – Filament not pulled.</a>
+				</li>
+
+			
+				<li>
+
+					<a class="bbp-reply-topic-title" href="http://www.prusaprinters.org/forums/topic/are-prusa3d-upgrade-kits-compatible-with-clones/#post-7004" title="Thanks for the answers!">Are Prusa3d upgrade kits compatible with clones?</a>
+				</li>
+
+			
+				<li>
+
+					<a class="bbp-reply-topic-title" href="http://www.prusaprinters.org/forums/topic/help-not-heating-to-correct-temps/#post-7003" title="Hi..i am a new user here. I think you should chec…">Help, Not heating to correct Temps</a>
+				</li>
+
+			
+				<li>
+
+					<a class="bbp-reply-topic-title" href="http://www.prusaprinters.org/forums/topic/are-prusa3d-upgrade-kits-compatible-with-clones/#post-7000" title="the mini rembo 1.3v is the new version and what I…">Are Prusa3d upgrade kits compatible with clones?</a>
+				</li>
+
+			
+				<li>
+
+					<a class="bbp-reply-topic-title" href="http://www.prusaprinters.org/forums/topic/are-prusa3d-upgrade-kits-compatible-with-clones/#post-6993" title="crazy, I just joined this forum today and I was w…">Are Prusa3d upgrade kits compatible with clones?</a>
+				</li>
+
+			
+		</ul>
+
+		</aside>  </div>
+  <div class="col-md-9">
+<section id="hi">
+
+
+
+          <div id="hiplaceholder"></div>
+          <div class="page-header">
+            <h1>Hi I'm Calculator</h1>
+          </div>
+
+          <p>Hi, I am new calculator. We created new PrusaPrinters website for all Prusa and RepRap fans. With everything from interesting <a href="http://prusaprinters.org/category/interviews/">interviews</a>, <a href="http://prusaprinters.org/category/guides/">guides</a> and <a href="http://prusaprinters.org/forums/">forums</a>. Please feel free to check it out and help us create vibrant community. Josef wrote about new PrusaPrinters <a href="http://prusaprinters.org/launching-prusa-printers/">here.</a></p>
+
+
+
+</section>
+<section id="filament">
+
+
+
+          <div id="filamentplaceholder"></div>
+          <div class="page-header">
+            <h1>Filament</h1>
+          </div>
+
+          <div id="realfilament">
+            <h2 id="headings">Real filament price</h2>
+            <p><strong>WORK IN PROGRESS!</strong> Great tool to compare 
+real price of filament. Only measurement, which accurately tells you how
+ much you can print with your purchased filament, is volume in cm<sup>3</sup>. Filament vendors should provide price per cm<sup>3</sup> which doesn't happen now. So I made this simple tool for you to calculate it.</p>
+            <p><strong>Example:</strong> You are offered 100m of PLA both in 3mm and 1.75mm for $25. With 3mm you will buy 2827cm<sup>3</sup> but with 1.75mm just 962cm<sup>3</sup> of plastic. That renders 1.75mm deal pretty awful as you will get just one third for the same price.</p>
+
+            <div class="calculation well">
+              
+            
+            <div class="row">
+
+            <div class="col-md-6">
+              <button type="button" id="filamentPriceByWeight" class="btn btn-block btn-default btn-success">Sold by weight</button>
+            </div>
+            <div class="col-md-6">
+              <button type="button" id="filamentPriceByMeter" class="btn btn-block btn-default">Sold by meter</button>
+            </div>
+            </div>
+            <br>
+            <div class="row">
+
+            <div class="col-md-6">
+            <div class="form-group">
+              <label for="name">Filament name</label>
+              
+                <input id="name" placeholder="Le filament name" value="Le filament name" size="3" class="form-control change" type="text"> 
+                
+              </div>
+              </div>
+
+
+            </div>
+            
+            <hr>
+
+            <div id="byWeight">
+            <div class="row">
+
+            <div class="col-md-6">
+            <div class="form-group">
+              <label for="weightWeight">Weight</label>
+              <div class="input-group">
+                <input id="weightWeight" value="0.75" size="3" class="form-control change" type="text"> 
+                <div class="input-group-addon">kg</div>
+                </div>
+              </div>
+              </div>
+
+
+            </div>
+
+
+
+            
+            </div> <!-- By weight ending -->
+
+           
+
+            
+            <div id="byMeter" style="display: none;">
+
+            
+
+            <div class="row">
+
+            <div class="col-md-6">
+            <div class="form-group">
+              <label for="meterLenght">Lenght</label>
+              <div class="input-group">
+                <input id="meterLenght" value="10" size="3" class="form-control change" type="text"> 
+                <div class="input-group-addon">m</div>
+                </div>
+              </div>
+              </div>
+
+
+            </div>
+
+
+
+            <div class="row">
+            <div class="col-md-6">
+            <div class="form-group">
+              <label for="meterDiameter">Diameter</label>
+              <div class="input-group">
+                <input id="meterDiameter" value="2.95" size="3" class="form-control change" type="text"> 
+                <div class="input-group-addon">mm</div>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-6">
+            <div class="form-group">
+              <label for="meterDiameterPreset">Diameter presets</label>
+              <select id="meterDiameterPreset" class="form-control change changePreset">
+                <option value="1.25" selected="selected">2.95 mm</option>
+                <option value="1">1.75 mm</option>
+              </select>
+              </div>
+              </div>
+              </div>
+
+
+           
+
+            </div> <!-- By meter ending -->
+            <hr>
+
+            <div class="row">
+              <div class="col-md-6">
+            <div class="form-group">
+              <label for="densityPresets">Material - presets the density for calculations</label>
+              <select id="densityPresets" class="form-control change changePreset">
+                <option value="1.08" selected="selected">ABS - 1.08 g/cm3</option>
+                <option value="1.3">PLA - 1.3 g/cm3</option>
+              </select>
+              </div>
+              </div>
+            <div class="col-md-6">
+            <div class="form-group">
+              <label for="density">Density</label>
+              <div class="input-group">
+                <input id="density" value="1.08" size="3" class="form-control change" type="text"> 
+                <div class="input-group-addon">g/cm<sup>3</sup></div>
+                </div>
+            </div>
+            </div>
+            
+              </div>
+
+            <div class="row">
+            <div class="col-md-6">
+            <div class="form-group">
+              <label for="price">Package price</label>
+              <div class="input-group">
+                <input id="price" value="19" size="3" class="form-control change" type="text"> 
+                <div class="input-group-addon" id="currencySymbol">$</div>
+                </div>
+            </div>
+            </div></div>
+
+
+
+          </div>
+            
+
+            <table class="table table-striped">
+          <thead><tr>
+            <th>Filament name</th>
+            <td>Price per cm<sup>3</sup></td>
+            <td>Total volume cm<sup>3</sup></td>
+            <td>Total wieght kg</td>
+            <td>Test whistles printed (2.6cm<sup>3</sup>)</td>
+          </tr></thead>
+
+          <tbody id="Suggested">
+            <tr><td id="suggestedHighlight"><strong id="resultName">Le filament name</strong></td>
+            <td><span id="resultPriceCM3">0.027360</span> $</td>
+            <td><span id="resultCM3">694.44</span> cm<sup>3</sup></td>
+            <td><span id="resultKG">0.750</span> kg</td>
+            <td><span id="resultWhistles">267</span></td>
+            </tr>
+          </tbody>
+          </table>
+
+
+            
+
+            <script type="text/javascript"> 
+            var CalculationType = 0;
+            $( "#byMeter").hide();
+            $( "#filamentPriceByWeight" ).click(function() {
+              $( "#filamentPriceByWeight" ).removeClass( "btn-success" ).addClass( "btn-success" );
+              $( "#filamentPriceByMeter" ).removeClass( "btn-success" );
+              $( "#byMeter").hide();
+              $( "#byWeight").show();
+              CalculationType = 0;
+              FilamentRealPrice(CalculationType);
+            });
+
+            $( "#filamentPriceByMeter" ).click(function() {
+              $( "#filamentPriceByMeter" ).removeClass( "btn-success" ).addClass( "btn-success" );
+              $( "#filamentPriceByWeight" ).removeClass( "btn-success" );
+              $( "#byMeter").show();
+              $( "#byWeight").hide();
+
+              CalculationType = 1;
+              FilamentRealPrice(CalculationType);
+            });
+
+            // Currency shit
+
+
+            // Function
+            function FilamentRealPrice(type){ 
+            var Name, WeightKG, Density, Price, Currency, PriceEUR, Lenght, Diameter, Whistles;
+
+            Name = $("#realfilament #name").val();
+            WeightKG = parseFloat($("#realfilament #weightWeight").val());
+            Density = parseFloat($("#realfilament #density").val());
+            Price = parseFloat($("#realfilament #price").val());
+            Currency = parseInt($("#realfilament #currency").val());
+            Lenght = parseFloat($("#realfilament #meterLenght").val());
+            Diameter = parseFloat($("#realfilament #meterDiameter").val());
+            
+
+            //alert(Name);alert(WeightKG);alert(Density);alert(Price);alert(Currency);alert(Lenght);alert(Diameter);
+
+            var cm3;
+            if(type==0){
+              cm3=(WeightKG*1000.0)/Density;
+            }else{
+              var radius = Diameter/2.0;
+              var crossection = Math.PI*radius*radius;
+              cm3= (crossection/100.0) * (Lenght*100.0);
+              WeightKG = (Density*cm3)/1000;
+            }
+            //alert(Density);
+            //alert(cm3);
+            var PricePerCm3 = Price/cm3;
+            Whistles = Math.floor(cm3/2.6);
+            
+           
+            if(Name.lenght <= 3){
+              $("#realfilament #resultName").text("Le filament name");
+            }else{
+              $("#realfilament #resultName").text(Name);
+            }
+            $("#realfilament #resultPriceCM3").text(PricePerCm3.toPrecision(5));
+            $("#realfilament #resultCM3").text(cm3.toPrecision(5));
+            $("#realfilament #resultKG").text(WeightKG.toPrecision(3));
+            $("#realfilament #resultWhistles").text(Whistles);
+
+            
+
+            }
+
+            $("#realfilament #densityPresets").change(function () {
+              densityPreset = parseFloat($("#realfilament #densityPresets").val());
+              $("#realfilament #density").val(densityPreset);
+              //FilamentRealPrice(CalculationType);
+            });
+
+            $("#realfilament .change").change(function () {
+              FilamentRealPrice(CalculationType);
+            });
+            FilamentRealPrice(CalculationType);
+             
+            </script>
+
+
+          </div> <!-- END OF layerheight -->
+
+</section>
+<section id="steppers">
+
+
+
+          <div id="steppermotors"></div>
+          <div class="page-header">
+            <h1>Stepper Motors</h1>
+          </div>
+
+          <div id="belt">
+            <div id="stepspermmbelt"> </div>
+            <h2 id="headings">Steps per millimeter - belt driven systems</h2>
+            <p>The result is theoreticaly right, but you might still 
+need to calibrate your machine to get finest detail. This is good start 
+tho.</p>
+            <p>If you struggle how to use this calculator, try aksing in <a href="http://prusaprinters.org/forums/topic/steps-per-mm/"><img draggable="false" class="emoji" alt="ℹ" src="calculators-Dateien/2139.svg"> steps per mm forum</a>.</p>
+            <div class="calculation well">
+              
+            <div class="row">
+            <div class="col-md-6">
+            <div class="form-group">
+              <label for="StepSize">Motor step angle</label>
+              <select id="StepSize" class="form-control change">
+                <option value="1.8" selected="selected">1.8° (200 per revolution)</option>
+                <option value="0.9">0.9° (400 per revolution)</option>
+                <option value="7.5">7.5° (48 per revolution)</option>
+              </select>
+              </div>
+              </div>
+              
+            <div class="col-md-6">
+            <div class="form-group">
+            <label for="MicroStepping">Driver microstepping</label>
+              <select id="MicroStepping" class="form-control change">
+
+                <option value="1">1 - full step</option>
+                <option value="2">1/2 - half step</option>
+                <option value="4">1/4 - quater step</option>
+                <option value="8">1/8 - uStep (mostly Gen6)</option>
+                <option value="16" selected="selected">1/16 - uStep (mostly Pololu)</option>
+                <option value="16">1/16- uStep (Smoothieboard)</option>
+                <option value="32">1/32- uStep (Crazy Smoothieboard)</option>
+              </select>
+            </div>
+            </div></div>
+
+            <div class="row">
+            <div class="col-md-6">
+            <div class="form-group">
+
+              <label for="BeltPitch">Belt pitch (in mm)</label>
+              <input id="BeltPitch" value="2" class="change form-control" type="text"> 
+            </div>
+            </div>
+
+            <div class="col-md-6">
+            <div class="form-group">
+
+              
+              <label for="BeltPresets">Belt presets</label>
+              <select id="BeltPresets" class="form-control change">
+              <option value="2.0" selected="selected">2mm Pitch (GT2 mainly)</option>
+              <option value="2.03">MXL belt (2.03mm)</option>
+              <option value="2.5">T2.5 (2.5mm)</option>
+              <option value="3">3mm Pitch (GT2, HTD)</option>
+              <option value="5">5mm Pitch (T5, GT2, HTD)</option>
+              <option value="5.08">0.2" XL belt (5.08mm)</option>
+            </select>
+            </div>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-md-6">
+            <div class="form-group">
+
+            <label for="ToothCount">Pulley tooth count</label>
+            <input id="ToothCount" value="8" class="change form-control" type="text">
+          </div>
+        </div>
+                    </div></div>
+
+                    <table class="table table-striped">
+          <thead><tr>
+            <th>Result</th>
+
+            <td>Resolution</td>
+            <td>Teeth</td>
+            <td>Step angle</td>
+            <td>Stepping</td>
+            <td>Belt</td>
+          </tr></thead>
+
+          <tbody><tr class="success">
+            <td><strong class="answer">200.00</strong> <a href="http://prusaprinters.org/forums/topic/steps-per-mm/" target="_blank">Click to Share!</a></td>
+            <td><span class="CopyResolution">5</span>micron</td>
+            <td><span class="CopyToothCount">8</span></td>
+            <td><span class="CopyStepSize">1.8</span>°</td>
+            <td>1/<span class="CopyMicroStepping">16</span>th</td>
+            <td><span class="CopyBeltPitch">2</span>mm</td>
+            </tr></tbody>
+          </table>
+
+
+            <div class="panel panel-default">
+              <div class="panel-heading">Example</div>
+              <div class="panel-body"><p><strong>M92</strong> g-code can set the steps per mm in real time. Here is an example with your result for X axis.</p>
+              <pre>M92 X<span class="answer">200.00</span></pre>
+              </div>
+            </div>
+            
+
+            <script type="text/javascript"> 
+            var $ = jQuery;
+
+            function SteppersBelt(){ 
+            var StepSize, Microstepping, BeltPitch, ToothCount;
+            StepSize = parseFloat($("#steppers #belt #StepSize").val());
+            Microstepping = parseInt($("#steppers #belt #MicroStepping").val());
+            BeltPitch = parseFloat($("#steppers #belt #BeltPitch").val());
+            ToothCount = parseInt($("#steppers #belt #ToothCount").val());
+            var StepsPerMM;
+            StepsPerMM = ((360/StepSize)*Microstepping)/(BeltPitch*ToothCount);
+            $("#steppers #belt .answer").text(StepsPerMM.toFixed(2)); 
+
+            $("#steppers #belt .CopyResolution").text((1./StepsPerMM)*1000);
+            $("#steppers #belt .CopyToothCount").text(ToothCount);
+            $("#steppers #belt .CopyStepSize").text(StepSize);
+            $("#steppers #belt .CopyMicroStepping").text(Microstepping);
+            $("#steppers #belt .CopyBeltPitch").text(BeltPitch);
+
+
+
+
+            }
+            $("#steppers #belt .changePreset").change(function () {
+              BeltPitchPreset = parseFloat($("#steppers #belt #BeltPresets").val());
+              $("#steppers #belt #BeltPitch").val(BeltPitchPreset);
+              SteppersBelt();
+            });
+            $("#steppers #belt .change").change(function () {
+              SteppersBelt();
+            });
+            SteppersBelt();
+             
+            </script>
+
+
+          </div> <!-- END OF BELTS -->
+          <div id="leadscrew">
+            <div id="stepspermmlead"> </div>
+            <h2 id="headings">Steps per millimeter - leadscrew driven systems</h2>
+            <p>Gives you number of steps electronics need to generate to move the axis by 1mm.</p>
+            <p>If you struggle how to use this calculator, try aksing in <a href="http://prusaprinters.org/forums/topic/steps-per-mm/"><img draggable="false" class="emoji" alt="ℹ" src="calculators-Dateien/2139.svg"> steps per mm forum</a>.</p>
+            <div class="calculation well">
+              
+            
+            <div class="row">
+            <div class="col-md-6">
+            <div class="form-group">
+              <label for="StepSize">Motor step angle</label>
+              <select id="StepSize" class="form-control change">
+                <option value="1.8" selected="selected">1.8° (200 per revolution)</option>
+                <option value="0.9">0.9° (400 per revolution)</option>
+                <option value="7.5">7.5° (48 per revolution)</option>
+              </select>
+              </div>
+              </div>
+
+            <div class="col-md-6">
+            <div class="form-group">
+              <label for="MicroStepping">Driver microstepping</label>
+              <select id="MicroStepping" class="form-control change">
+                <option value="1">1 - full step</option>
+                <option value="2">1/2 - half step</option>
+                <option value="4">1/4 - quater step</option>
+                <option value="8">1/8 - uStep (mostly Gen6)</option>
+                <option value="16" selected="selected">1/16 - uStep (mostly Pololu)</option>
+                <option value="16">1/16- uStep (Smoothieboard)</option>
+                <option value="32">1/32- uStep (Crazy Smoothieboard)</option>
+              </select>
+              </div>
+              </div>
+              </div>
+
+
+            <div class="row">
+            <div class="col-md-6">
+            <div class="form-group">
+              <label for="LeadscrewPitch">Leadscrew pitch</label>
+              <div class="input-group">
+                <input id="LeadscrewPitch" value="1.25" size="3" class="form-control change" type="text"> 
+                <div class="input-group-addon">mm/revolution</div>
+                </div>
+              </div>
+              </div>
+
+            <div class="col-md-6">
+            <div class="form-group">
+              <label for="LeadscrewPresets">Pitch presets</label>
+              <select id="LeadscrewPresets" class="form-control change changePreset">
+                <option value="1.25" selected="selected">M8 - metric (1.25mm per rotation)</option>
+                <option value="1">M6 - metric (1mm per rotation)</option>
+                <option value="0.8">M5 - metric (0.8mm per rotation)</option>
+                <option value="12">12 (12mm per rotation)</option>
+                <option value="16">16 (16mm per rotation)</option>
+                <option value="25">25 (25mm per rotation)</option>
+                <option value="1.41111">5/16"-18 imperial coarse (1.41111mm per rotation)</option>
+                <option value="1.270">3/16"-20 imperial (1.270mm per rotation)</option>
+                <option value="1.5875">1/4"-16 Acme (1.5875mm per rotation)</option>
+              </select>
+              </div>
+              </div></div>
+              
+            <div class="row">
+            <div class="col-md-6">
+            <div class="form-group">
+              <label for="PulleyMotor">Gear ratio</label>
+              
+                <div class="row">
+                  <div class="col-xs-5">
+                    <input id="PulleyMotor" value="1" class="form-control change" type="text">
+                  </div>
+                  <div class="col-xs-1"> :</div>
+                    <div class="col-xs-5"><input id="PulleyLeadscrew" value="1" class="form-control change" type="text">
+                  </div>
+              </div>
+                
+              </div>
+              </div>
+
+
+            </div>
+                    </div>
+
+                    <table class="table table-striped">
+          <thead><tr>
+            <th>Result</th>
+            <td>Leadscrew pitch</td>
+            <td>Step angle</td>
+            <td>Stepping</td>
+            <td>Gear ratio</td>
+          </tr></thead>
+
+          <tbody><tr class="success">
+            <td style="background-color:#CBE86B;"><strong class="answer">2560.00</strong> <a href="http://prusaprinters.org/forums/topic/steps-per-mm/" target="_blank">Click to Share!</a></td>
+            <td><span class="CopyLeadscrewPitch">1.25</span></td>
+            <td><span class="CopyStepSize">1.8</span>°</td>
+            <td>1/<span class="CopyMicroStepping">16</span>th</td>
+            <td><span class="CopyPulleyMotor">1</span> : <span class="CopyPulleyLeadscrew">1</span></td>
+            </tr></tbody>
+          </table>
+
+
+            <div class="panel panel-default">
+              <div class="panel-heading">Example</div>
+              <div class="panel-body"><p><strong>M92</strong> g-code can set the steps per mm in real time. Here is an example with your result for X axis.</p>
+              <pre>M92 Z<span class="answer">2560.00</span></pre></div>
+            </div>
+            
+
+            <script type="text/javascript"> 
+
+
+            function SteppersLeadscrew(){ 
+            var StepSize, Microstepping, BeltPitch, ToothCount;
+            StepSize = parseFloat($("#steppers #leadscrew #StepSize").val());
+            Microstepping = parseInt($("#steppers #leadscrew #MicroStepping").val());
+            LeadscrewPitch = parseFloat($("#steppers #leadscrew #LeadscrewPitch").val());
+            PulleyMotor = parseInt($("#steppers #leadscrew #PulleyMotor").val());
+            PulleyLeadscrew = parseInt($("#steppers #leadscrew #PulleyLeadscrew").val());
+            var StepsPerMM;
+            
+            StepsPerMM = ((360/StepSize)*Microstepping)/(LeadscrewPitch)*(PulleyLeadscrew/PulleyMotor);
+            $("#steppers #leadscrew .answer").text(StepsPerMM.toFixed(2)); 
+
+            $("#steppers #leadscrew .CopyLeadscrewPitch").text(LeadscrewPitch);
+            $("#steppers #leadscrew .CopyStepSize").text(StepSize);
+            $("#steppers #leadscrew .CopyMicroStepping").text(Microstepping);
+            $("#steppers #leadscrew .CopyPulleyMotor").text(PulleyMotor);
+            $("#steppers #leadscrew .CopyPulleyLeadscrew").text(PulleyLeadscrew);
+
+
+
+
+            }
+            $("#steppers #leadscrew .changePreset").change(function () {
+              LeadscrewPitchPreset = parseFloat($("#steppers #leadscrew #LeadscrewPresets").val());
+              $("#steppers #leadscrew #LeadscrewPitch").val(LeadscrewPitchPreset);
+              SteppersLeadscrew();
+            });
+
+            $("#steppers #leadscrew .change").change(function () {
+              SteppersLeadscrew();
+            });
+            SteppersLeadscrew();
+             
+            </script>
+
+
+          </div> <!-- END OF Leadscrews -->
+          <div id="layerheight">
+            <div id="optimallayer"> </div>
+            <h2 id="headings">Optimal layer height for your Z axis</h2>
+            <p>Helps you to select layer height in a way, that Z axis 
+moves only by full step increments. Z axis isn't usually enabled during 
+inactivity. If the axis is disabled during micro-step, axis jumps to the
+ closest full step and intorduce error. This effect is occuring to some 
+extent even while leaving the Z axis motors enabled. This is most 
+usefull to machines with imperial leadscrews but also for unusual layer 
+heights with metric leadscrews.</p>
+            <div class="calculation well">
+              
+            
+            <div class="row">
+            <div class="col-md-6">
+            <div class="form-group">
+              <label for="StepSize">Motor step angle</label>
+              <select id="StepSize" class="form-control change">
+                <option value="200" selected="selected">1.8° (200 per revolution)</option>
+                <option value="400">0.9° (400 per revolution)</option>
+                <option value="48">7.5° (48 per revolution)</option>
+              </select>
+              </div>
+              </div>
+
+              <div class="col-md-6">
+            <div class="form-group">
+              <label for="DesiredHeight">Desired layer height</label>
+              <div class="input-group">
+                <input id="DesiredHeight" value="0.3" size="3" class="form-control change" type="text"> 
+                <div class="input-group-addon">mm</div>
+                </div>
+              </div>
+              </div>
+            
+
+            </div>
+
+
+
+            <div class="row">
+            <div class="col-md-6">
+            <div class="form-group">
+              <label class="span3" style="margin-left: 0px;">Leadscrew pitch</label>
+              <div class="input-group">
+                <input id="LeadscrewPitch" value="1.25" size="3" class="form-control change" type="text"> 
+                <div class="input-group-addon">mm/revolution</div>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-6">
+            <div class="form-group">
+              <label for="LeadscrewPresets">Pitch presets</label>
+              <select id="LeadscrewPresets" class="form-control change changePreset">
+                <option value="1.25" selected="selected">M8 - metric (1.25mm per rotation)</option>
+                <option value="1">M6 - metric (1mm per rotation)</option>
+                <option value="0.8">M5 - metric (0.8mm per rotation)</option>
+                <option value="12">12 (12mm per rotation)</option>
+                <option value="16">16 (16mm per rotation)</option>
+                <option value="25">25 (25mm per rotation)</option>
+                <option value="1.41111">5/16"-18 imperial coarse (1.41111mm per rotation)</option>
+                <option value="1.270">3/16"-20 imperial (1.270mm per rotation)</option>
+                <option value="1.5875">1/4"-16 Acme (1.5875mm per rotation)</option>
+              </select>
+              </div>
+              </div>
+              </div>
+              
+            <div class="row">
+            <div class="col-md-6">
+            <div class="form-group">
+              <label for="PulleyMotor">Gear ratio</label>
+              
+                <div class="row">
+                  <div class="col-xs-5">
+                    <input id="PulleyMotor" value="1" class="form-control change" type="text">
+                  </div>
+                  <div class="col-xs-1"> :</div>
+                    <div class="col-xs-5"><input id="PulleyLeadscrew" value="1" class="form-control change" type="text">
+                  </div>
+              
+              </div>
+              </div></div></div></div>
+            
+
+            <table class="table table-striped">
+          <thead><tr>
+            <th>Layer height</th>
+            <td>Error over 10cm</td>
+            <td>Number of steps</td>
+            <td>Step length</td>
+          </tr></thead>
+
+          <tbody id="FloorSuggested"><tr class="success">
+            <td style="background-color:#CBE86B;"><strong class="answer">0.29375</strong></td>
+            <td><span class="CopyError">0</span>mm</td>
+            <td><span class="CopyStepCount">47</span></td>
+            <td><span class="CopyStepSize">0.00625</span>mm</td>
+            </tr>
+          </tbody>
+
+          <tbody id="Suggested"><tr id="suggestedHeight">
+            <td id="suggestedHighlight" style="background-color: rgb(203, 232, 107);"><strong class="answer">0.3</strong></td>
+            <td><span class="CopyError">0</span>mm</td>
+            <td><span class="CopyStepCount">48</span></td>
+            <td><span class="CopyStepSize">0.00625</span>mm</td>
+            </tr>
+          </tbody>
+
+          <tbody id="CeilSuggested"><tr class="success">
+            <td style="background-color:#CBE86B;"><strong class="answer">0.30625</strong></td>
+            <td><span class="CopyError">0</span>mm</td>
+            <td><span class="CopyStepCount">49</span></td>
+            <td><span class="CopyStepSize">0.00625</span>mm</td>
+            </tr>
+          </tbody>
+          </table>
+
+
+            
+
+            <script type="text/javascript"> 
+
+
+            function SteppersLayerheight(){ 
+            var StepSize, Microstepping, BeltPitch, ToothCount;
+            StepSize = parseFloat($("#steppers #layerheight #StepSize").val());
+            DesiredHeight = parseFloat($("#steppers #layerheight #DesiredHeight").val());
+            LeadscrewPitch = parseFloat($("#steppers #layerheight #LeadscrewPitch").val());
+            PulleyMotor = parseInt($("#steppers #layerheight #PulleyMotor").val());
+            PulleyLeadscrew = parseInt($("#steppers #layerheight #PulleyLeadscrew").val());
+            var StepsPerMM;
+            
+            StepLenght = (parseInt(LeadscrewPitch*1000000)/parseInt(StepSize*1000000))*(PulleyLeadscrew/PulleyMotor);
+            LenghtsPerLayer = (parseInt(DesiredHeight*1000000)/parseInt(StepLenght*1000000));
+            FloorLenghtsPerLayer = Math.floor(LenghtsPerLayer);
+            CeilLenghtsPerLayer = Math.ceil(LenghtsPerLayer);
+
+            if(FloorLenghtsPerLayer == CeilLenghtsPerLayer){
+              // good layer height suggested
+              $("#steppers #layerheight #suggestedHighlight").css("background-color","#CBE86B");
+
+              FloorLenghtsPerLayer--;
+              CeilLenghtsPerLayer++;
+
+              FloorHeight = FloorLenghtsPerLayer*StepLenght;
+              CeilHeight = CeilLenghtsPerLayer*StepLenght;
+              errorSign = 0;
+              errorPer10cm = 0;
+            }else{
+              // not a good layer height suggested
+              $("#steppers #layerheight #suggestedHighlight").css("background-color","#FF8473");
+              FloorHeight = FloorLenghtsPerLayer*StepLenght;
+              FloorHeight = FloorHeight.toPrecision(4);
+              CeilHeight = CeilLenghtsPerLayer*StepLenght;
+              CeilHeight = CeilHeight.toPrecision(4);
+
+              errorPerStep = LenghtsPerLayer - Math.floor(LenghtsPerLayer);
+
+              errorSign = "-";
+              if(errorPerStep > 0.5){
+                errorPerStep = 1-errorPerStep;
+                errorSign = "+";
+              }
+              error10cmsteps = 100/DesiredHeight;
+              errorPer10cm = error10cmsteps*errorPerStep*StepLenght;
+            }
+
+            //alert(LenghtsPerLayer +" "  + FloorLenghtsPerLayer + " - " + CeilLenghtsPerLayer)
+
+
+            // original line
+            $("#steppers #layerheight #Suggested .answer").text(DesiredHeight); 
+            $("#steppers #layerheight #Suggested .CopyStepCount").text(LenghtsPerLayer); 
+            $("#steppers #layerheight #Suggested .CopyStepSize").text(StepLenght); 
+            $("#steppers #layerheight #Suggested .CopyError").text(errorSign+errorPer10cm); 
+
+            // floor value
+            $("#steppers #layerheight #FloorSuggested .answer").text(FloorHeight);
+            $("#steppers #layerheight #FloorSuggested .CopyStepCount").text(FloorLenghtsPerLayer);
+            $("#steppers #layerheight #FloorSuggested .CopyStepSize").text(StepLenght); 
+            $("#steppers #layerheight #FloorSuggested .CopyError").text("0"); 
+
+            // ceil suggested
+            $("#steppers #layerheight #CeilSuggested .answer").text(CeilHeight);
+            $("#steppers #layerheight #CeilSuggested .CopyStepCount").text(CeilLenghtsPerLayer);
+            $("#steppers #layerheight #CeilSuggested .CopyStepSize").text(StepLenght); 
+            $("#steppers #layerheight #CeilSuggested .CopyError").text("0"); 
+
+
+            }
+            $("#steppers #layerheight .changePreset").change(function () {
+              LeadscrewPitchPreset = parseFloat($("#steppers #layerheight #LeadscrewPresets").val());
+              $("#steppers #layerheight #LeadscrewPitch").val(LeadscrewPitchPreset);
+              SteppersLayerheight();
+            });
+
+            $("#steppers #layerheight .change").change(function () {
+              SteppersLayerheight();
+            });
+            SteppersLayerheight();
+             
+            </script>
+
+
+          </div> <!-- END OF layerheight -->
+
+</section>
+
+<section id="accelerationsection">
+
+
+
+          <div id="acceleration"></div>
+          <div class="page-header">
+            <h1>Acceleration</h1>
+          </div>
+
+          <div id="maxSpeed">
+            <div id="speed"> </div>
+            <h2 id="headings">Max Speed</h2>
+            <p>Input your acceleration settings, distance/length of axis
+ and you can see you your printer will hit your desired speed and for 
+how long.</p>
+            <div class="calculation well">
+              
+              <div class="row">
+                <div class="col-md-6">
+                <div class="form-group">
+                <label for="acceleration">Acceleration</label>
+                <div class="input-group">
+                  <input id="acceleration" value="3000" size="3" class="form-control change" type="text"> 
+                  <div class="input-group-addon">mm/s<sup>2</sup></div>
+                </div>
+                </div>
+                </div>
+
+                <div class="col-md-6">
+                <div class="form-group">
+                <label for="distance">Distance or axis length</label>
+                <div class="input-group">
+                  <input id="distance" value="200" size="3" class="form-control change" type="text"> 
+                  <div class="input-group-addon">mm</div>
+                </div>
+                </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                <div class="form-group">
+                <label for="Desired speed">Desired speed</label>
+                <div class="input-group">
+                  <input id="desiredSpeed" value="150" size="3" class="form-control change" type="text"> 
+                  <div class="input-group-addon">mm/s</div>
+                </div>
+                </div>
+                </div>
+              </div>
+              </div>
+            </div>
+            
+
+            <div class="calculation" id="maxAccelerationGraph" style="min-height: 300px; padding: 0px; position: relative;">
+            <canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 705px; height: 300px;" width="705" height="300"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div style="position: absolute; max-width: 78px; top: 276px; left: 22px; text-align: center;" class="flot-tick-label tickLabel">0</div><div style="position: absolute; max-width: 78px; top: 276px; left: 103px; text-align: center;" class="flot-tick-label tickLabel">25</div><div style="position: absolute; max-width: 78px; top: 276px; left: 187px; text-align: center;" class="flot-tick-label tickLabel">50</div><div style="position: absolute; max-width: 78px; top: 276px; left: 271px; text-align: center;" class="flot-tick-label tickLabel">75</div><div style="position: absolute; max-width: 78px; top: 276px; left: 352px; text-align: center;" class="flot-tick-label tickLabel">100</div><div style="position: absolute; max-width: 78px; top: 276px; left: 435px; text-align: center;" class="flot-tick-label tickLabel">125</div><div style="position: absolute; max-width: 78px; top: 276px; left: 519px; text-align: center;" class="flot-tick-label tickLabel">150</div><div style="position: absolute; max-width: 78px; top: 276px; left: 603px; text-align: center;" class="flot-tick-label tickLabel">175</div><div style="position: absolute; max-width: 78px; top: 276px; left: 687px; text-align: center;" class="flot-tick-label tickLabel">200</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div style="position: absolute; top: 260px; left: 14px; text-align: right;" class="flot-tick-label tickLabel">0</div><div style="position: absolute; top: 195px; left: 2px; text-align: right;" class="flot-tick-label tickLabel">200</div><div style="position: absolute; top: 130px; left: 2px; text-align: right;" class="flot-tick-label tickLabel">400</div><div style="position: absolute; top: 65px; left: 2px; text-align: right;" class="flot-tick-label tickLabel">600</div><div style="position: absolute; top: 0px; left: 2px; text-align: right;" class="flot-tick-label tickLabel">800</div></div></div><canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 705px; height: 300px;" width="705" height="300"></canvas></div>
+
+
+            
+            <script src="calculators-Dateien/jquery_005.js"></script>
+            <script type="text/javascript"> 
+            var $ = jQuery;
+
+
+            function AccelerationMaxSpeed(){ 
+            var StepSize, Microstepping, BeltPitch, ToothCount;
+            Acceleration = parseFloat($("#maxSpeed #acceleration").val());
+            Distance = parseInt($("#maxSpeed #distance").val());
+            Speed = parseFloat($("#maxSpeed #desiredSpeed").val());
+
+            // graph
+            acceleration = Acceleration;
+            axisLenght = Distance;
+            speed = Speed;
+
+            timeToFullSpeed = speed/acceleration;
+            distanceToFullSpeed = (acceleration*timeToFullSpeed*timeToFullSpeed)/2;
+
+            
+            var d2 = [];
+            if((axisLenght/2)<= distanceToFullSpeed){
+              time = Math.sqrt((axisLenght)/acceleration);
+              speed = acceleration*time;
+              timeToFullSpeed = speed/acceleration;
+              distanceToFullSpeed = (acceleration*timeToFullSpeed*timeToFullSpeed)/2;
+              
+            }else{
+            d2.push([distanceToFullSpeed, speed]);
+            d2.push([axisLenght-distanceToFullSpeed, speed]);
+
+            }
+
+            var d1 = [];
+            
+            for (var i = 0; i <= axisLenght/2; i += axisLenght/400) {
+              time = Math.sqrt((2*i)/acceleration);
+              speed = acceleration*time;
+              d1.push([i, speed]);
+            }
+
+            decelerationStartsAt = axisLenght-distanceToFullSpeed;
+
+            for (var i = axisLenght/2; i <= axisLenght; i += axisLenght/400) {
+              fakeDistance = axisLenght-i;
+              time = Math.sqrt((2*fakeDistance)/acceleration);
+              speed = acceleration*time;
+              d1.push([i, speed]);
+            }
+
+
+            $.plot("#maxAccelerationGraph", [ d1, d2]);
+
+            }
+
+            $("#maxSpeed .change").change(function () {
+              AccelerationMaxSpeed();
+            });
+            AccelerationMaxSpeed();
+
+            
+             
+            </script>
+
+
+          </section></div> <!-- END OF layerheight -->
+<!--
+          
+          <div class="page-header">
+            <h1>Color Print</h1>
+          </div>
+
+          
+<iframe width="705" src="/colorprint/html/index.html" height="800" frameborder="0"></iframe>
+-->
+
+
+</div></div>
+</div>
+
+
+
+	</div><!-- #main -->
+	
+			<div id="footer-widgets">
+			<div class="container">
+				<div class="col-md-3 col-sm-3"><aside id="text-4-footer-1" class="row widget  widget_text"><h3 class="widget-title">About</h3><div class="widget-clear"></div>			<div class="textwidget"><p><strong>PrusaPrinters.org</strong> is community website for all Prusa 3D printer owners or fans. You can watch many interesting <a href="http://prusaprinters.org/category/interviews/" style="text-decoration:underline;">interviews</a>, <a href="http://prusaprinters.org/category/guides/" style="text-decoration:underline;">guides</a> and use our amazing <a href="http://prusaprinters.org/calculator/" style="text-decoration:underline;">Calculator</a>!</p>
+<p><a href="http://prusaprinters.org/contact/" style="text-decoration:underline;">Contact and tips.</a></p>
+</div>
+		</aside></div>
+				<div class="col-md-3 col-sm-3">		<aside id="recent-posts-3-footer-2" class="row widget  widget_recent_entries">		<h3 class="widget-title">Recent Blogs</h3><div class="widget-clear"></div>		<ul>
+					<li>
+				<a href="http://www.prusaprinters.org/prusacontrol-release/">PrusaControl release</a>
+						</li>
+					<li>
+				<a href="http://www.prusaprinters.org/update-multi-material-upgrade-2/">Update on Multi Material Upgrade #2</a>
+						</li>
+					<li>
+				<a href="http://www.prusaprinters.org/original-prusa-i3-mk2s-release/">Original Prusa i3 MK2S release</a>
+						</li>
+					<li>
+				<a href="http://www.prusaprinters.org/smooth-variable-layer-height-awesome-supports-slic3r-prusa-edition/">Smooth Variable Layer Height and Awesome Supports in Slic3r Prusa Edition</a>
+						</li>
+					<li>
+				<a href="http://www.prusaprinters.org/update-multimaterial-upgrade/">Update on Multi Material Upgrade</a>
+						</li>
+				</ul>
+		</aside>		</div>
+				<div class="col-md-3 col-sm-3"><aside id="mc_mm_widget-3-footer-3" class="row widget  widget_mc_mm_widget"><h3 class="widget-title">Join Josef Prusa’s 3D printing Newsletter</h3><div class="widget-clear"></div><div class="mailmunch-wordpress-widget mailmunch-wordpress-widget-215791" style="display: block !important;"><div class="mailmunch-sidebar mailmunch-sidebar-15d522f960d1388c" style="display: block;"><iframe class="mailmunch-sidebar-iframe mailmunch-sidebar-iframe-15d522f960d1388c" scrolling="no" allowtransparency="true" style="background: transparent none repeat scroll 0% 0%; border: 0px none; margin-bottom: 0px; width: 100%; height: 212px;" frameborder="0"></iframe></div></div></aside></div>
+				<div class="col-md-3 col-sm-3"></div>
+			</div>		
+		</div>
+		<footer id="footer" class="site-footer" role="contentinfo">
+		<div class="container">
+			<div class="site-info center">
+								<div id="copyright-text">
+					<p>© 2017 <a href="http://josefprusa.cz/" target="_blank" style="text-decoration:underline;">Josef Průša</a>&nbsp;and funded by <a href="http://shop.prusa3d.com/" target="_blank" style="text-decoration:underline;">Prusa3D</a> <a href="http://www.prusaprinters.org/contact/" style="text-decoration:underline;">Contact and tips.</a></p>				</div>
+			</div><!-- .site-info -->
+		</div>
+	</footer><!-- #footer -->
+<!-- #page -->
+<!-- Facebook Comments Plugin for WordPress: http://peadig.com/wordpress-plugins/facebook-comments/ -->
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" style="border: medium none;" src="http://staticxx.facebook.com/connect/xd_arbiter/r/XBwzv5Yrm_1.js?version=42#channel=f1e603b02eb0cde&amp;origin=http%3A%2F%2Fwww.prusaprinters.org" frameborder="0"></iframe><iframe name="fb_xdm_frame_https" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" style="border: medium none;" src="calculators-Dateien/XBwzv5Yrm_1_002.html" frameborder="0"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1715442508709402&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+<iframe id="rufous-sandbox" scrolling="no" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: medium none;" title="Twitter analytics iframe" frameborder="0"></iframe><img src="calculators-Dateien/a_002.gif" style="display: none;" width="1" height="1"><img src="calculators-Dateien/a.gif" style="display: none;" width="1" height="1"></body></html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1500315279 -->
