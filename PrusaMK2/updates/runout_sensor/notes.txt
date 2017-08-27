@@ -1,0 +1,57 @@
+Link: https://shop.prusa3d.com/forum/improvements-f14/wire-up-filament-sensor-to-mk2-use-thermister-circ-t2836-s10.html#p30460
+
+Re: Wire up filament sensor to MK2, use thermister circuit?
+Quote
+Tue Apr 18, 2017 4:09 pm
+
+After i saw that two of you asked for testing the filament runout sensor function, i connected two wires to P3 pin 4 GND and pin 6 SCL aka FR_SENS aka FILAMENT_RUNOUT_SENSOR. These two wires disconnected (switch open) = run out of filament.
+
+To get the function running i had to change a line in the 'Configuration_prusa.h', which is a copy of the '1_75mm_MK2-RAMBo13a-E3Dv6full.h' file in the variants folder of the firmware repository.
+
+You have to to find in that file
+'// Define Prusa filament runout sensor
+//#define FILAMENT_RUNOUT_SUPPORT
+
+#ifdef FILAMENT_RUNOUT_SUPPORT
+#define FILAMENT_RUNOUT_SENSOR 1
+#endif'
+
+here un-comment '#define FILAMENT_RUNOUT_SUPPORT'
+Following the instructions you can compile and 'Export compiled Binary' then upload the firmware using the Prusa firmware updater tool, Cura or OctoPrint with firmware plugin.
+
+So how it works:
+As soon the connection of the P3 pin 6 to P3 pin 4 is disconnected (switch OPEN)
+1. the printer stops to print
+2. retract the filament
+3. moves to the front (X211 Y0 Z current Z height + additional 2)
+4. beeps with a message on the screen to change the filament and commit with the knob
+5. as soon you changed the filament it will extrude the filament, in my case the nozzle was just few mm from the bed and i had to pull the extruded filament to prevent getting a BLOB.
+6. the menu will ask you if you changed the filament, filament not loaded or if the color is not clear.
+7. as soon you commit the change of the filament the printer continues the print WHERE it stopped.
+
+What can be improved?
+I think that the changing position X211 Y0 and Z<current height>+2 is not optimal because of the filament is oozing out, especially when the current Z height is quite low you risk a BLOB.
+How can you prevent that?
+One option is to change the 'FILAMENTCHANGE_XPOS', 'FILAMENTCHANGE_YPOS' and 'FILAMENTCHANGE_ZADD'. The XPOS and YPOS are not an issue to change BUT be careful changing the ZADD value. Having a higher ZADD value and printing something high can cause your print to fail if run out OR change filament.
+
+Example: You print a two color rocket that is 200mm high and the last 5mm will have another color. With the default settings the nozzle will move to X211 Y0 and Z195+2 during the filament change. This will work without any problems, it is in the max Z height.
+
+BUT if you changed the ZADD value to 20 to get more clearance with low prints while changing filament THIS will fail your 200mm rocket print. The filament change at 195mm will try to move the Z axis additional 20 mm and the Z-stepper motors will missing steps. As soon you change the filament to finish your rocket the printer 'thinks' it is at Z215 but in real it is somewhere around 200-205mm and will subtract 20 mm to continue the print and knock off your print and print the last 5mm in the air.
+
+What for it is a run-out sensor good?
+1. Printer stops the print when it runs out of filament and CAN continue after changing the filament.
+2. Sometimes you have just not enough filament on one spool to finish the print and you start an new one. Having the sensor you can use nearly the hole roll and change to the new one during the print as soon it runs out.
+
+hope that helped.
+
+BTW I haven't add the filament run-out sensor yet just two cables simulating the run-out.
+
+Update:
+Checking the miniRAMbo schematics again i think changing the FR_SENS pin 21 to an unused end stop max connector makes more sense, because SCL can be used on another pin header.
+To do that you have to change in the 'pins.h' file the 'FR_SENS' value from 21 to 24 (for Y-MAX) and the 'Y-MAX' value must the be -1 (unused).
+david.b14
+Posts: 588
+Joined: Mon Oct 31, 2016 12:42 pm
+Contact: Send private message 
+
+
